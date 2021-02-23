@@ -218,11 +218,11 @@ function simulazione(npallini, nmalati, nfermi, tempoguarigione) {
     init();
 }
 
-function start(e)
+function start()
 {
-    e.preventDefault();
+    //e.preventDefault();
     simulazione(20, 1, 0, 10000);
 }
 
-var el = document.getElementById("bottone");
-el.addEventListener('click', start, false);
+// var el = document.getElementById("bottone");
+// el.addEventListener('click', start, false);

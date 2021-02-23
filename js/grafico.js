@@ -1,4 +1,3 @@
-var myCanvas = document.getElementById("myCanvas");
 var myLabels = ["12/02", "12/03", "12/04", "12/05", "12/06", "12/07"];
 var myData = [120, 180, 32, 100, 67, 450 ];
 var myData2 =  [30, 190, 69, 3, 63, 98];
@@ -6,9 +5,11 @@ var myData2 =  [30, 190, 69, 3, 63, 98];
 var colore = "rgb(220,20,60)";
 var colore2 = "rgb(255,255,0)";
 
-var ctx = document.getElementById("myChart");
+var context = document.getElementById("myChart");
+console.log("pippo")
+console.log(context)
 //creazione grafico
-var myLineChart = new Chart(ctx, {
+var myLineChart = new Chart(context, {
     type: 'line',
     data: {
         labels: myLabels, //sono i nomi nell'asse X
@@ -29,17 +30,17 @@ var myLineChart = new Chart(ctx, {
             fill: false
         }],
     },         
-//FINE DATA
-options: {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true //è un boolean, serve per far partire asseY da 0
-            }
-        }]
-    },
-    responsive: true
-}
+    //FINE DATA
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true //è un boolean, serve per far partire asseY da 0
+                }
+            }]
+        },
+        responsive: true
+    }
 });
 
 
