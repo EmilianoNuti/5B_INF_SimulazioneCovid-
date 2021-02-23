@@ -9,10 +9,10 @@ function simulazione(npallini, nmalati, nfermi, tempoguarigione) {
 
     var pallino = [];
     var pareti = [
-		[5, 5],
-		[1275, 5],
-		[1275, 875],
-		[5, 875]
+		[0, 0],
+		[canvas.width, 0],
+		[canvas.width, canvas.height],
+		[0, canvas.height]
     ];
     
     var dati_iterazione = []
@@ -217,3 +217,12 @@ function simulazione(npallini, nmalati, nfermi, tempoguarigione) {
 
     init();
 }
+
+function start(e)
+{
+    e.preventDefault();
+    simulazione(20, 1, 0, 10000);
+}
+
+var el = document.getElementById("bottone");
+el.addEventListener('click', start, false);
