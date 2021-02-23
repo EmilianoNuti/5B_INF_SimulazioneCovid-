@@ -1,4 +1,4 @@
-let canvas = document.getElementById("myCanvas");
+/*let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
 class Ball 
@@ -56,6 +56,7 @@ function adjust_for_dpi(canvas_ele)
     
 
 }
+*/
 
 function start()
 {
