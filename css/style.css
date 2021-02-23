@@ -1,6 +1,12 @@
 .chart-div
 {
-    margin-right: 10%;
-    
+    margin-right: 5%;
     margin-bottom: 40%;
+}
+
+.title h1
+{
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Anton', sans-serif;
 }
