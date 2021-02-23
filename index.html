@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="./js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> <!--libreria Chartjs per i grafici-->
-    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
-</head>
-<body>
-
-    <div class="div-padre">
-        <div class="container">
-          <div class="title">
-            <h1>GRAFICO SIMULAZIONE</h1>
-          </div>
-          <div class="chart-div"> <!--Div dove all'interno c'è il canvas del grafico-->
-            <canvas id="myChart">
-                <!--GRAFICO-->
-            </canvas>
-          </div>
-        </div>
-      </div>
-
-
     <script src="./js/grafico.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script> <!--Script da passare-->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./img/covidico.png" type="image/x-icon"/>
+    <title>Simulazione COVID</title>
+</head>
+<body>
+    <div id="input-form"></div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <h1 id="titolo">Simulazione COVID-19</h1>
+        </div>
+      </nav>
+    <div id="form">  
+        <div id="input-form" class="col-sm-8 text-left">
+            <form>
+                <label for="TotalePop">Numero popolazione:</label><br>
+                <input type="number" id="TotalePers" name="TotalePers"><br>
+                <label for="MalatiIniz">Malati iniziali:</label><br>
+                <input type="number" id="MalatiIniz" name="MalatiIniz"><br>
+                <label for="TempoGuarig">Tempo guarigione:</label><br>
+                <input type="number" name="TempoGuarig" id="TempoGuarig"><br>
+                <label for="PersoneQuarantena">Persone quarantena:</label><br>
+                <input type="number" name="PersoneQuarantena" id="PersoneQuarantena"><br>
+                <p><button onclick="getFormData()">Start</button></p>
+            </form>
+        </div>
+    </div>
+    <div id="simulazione">
+        <div id="div_canvas">
+            <canvas id="finestraGioco">
+            </canvas>
+        </div>
+    </div>
+    <div id="grafico">
+        <div class="div-padre">
+            <div class="container">
+              <div class="title">
+                <h1>GRAFICO SIMULAZIONE</h1>
+              </div>
+              <div class="chart-div"> <!--Div dove all'interno c'è il canvas del grafico-->
+                <canvas id="myChart">
+                    <!--GRAFICO-->
+                </canvas>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="./js/simulazione.js"></script>
 </body>
 </html>
