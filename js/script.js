@@ -56,6 +56,7 @@ function adjust_for_dpi(canvas_ele)
     
 
 }
+
 function start()
 {
 
