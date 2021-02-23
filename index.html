@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <script src="./js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -11,6 +12,7 @@
     <title>Simulazione COVID</title>
 </head>
 <body>
+    <div id="input-form"></div>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <h1 id="titolo">Simulazione COVID-19</h1>
@@ -22,11 +24,15 @@
                 <label for="TotalePop">Numero popolazione:</label><br>
                 <input type="number" id="TotalePers" name="TotalePers"><br>
                 <label for="MalatiIniz">Malati iniziali:</label><br>
-                <input type="number" id="MalatiIniz" name="MalatiIniz">
-                <br><br><p><button id="bottone">Start</button></p>
+                <input type="number" id="MalatiIniz" name="MalatiIniz"><br>
+                <label for="TempoGuarig">Tempo guarigione:</label><br>
+                <input type="number" name="TempoGuarig" id="TempoGuarig"><br>
+                <label for="PersoneQuarantena">Persone quarantena:</label><br>
+                <input type="number" name="PersoneQuarantena" id="PersoneQuarantena"><br>
+                <p><button onclick="getFormData()">Start</button></p>
             </form>
         </div>
-    </div>  
+    </div>
     <div id="simulazione">
         <div id="div_canvas">
             <canvas id="finestraGioco">
