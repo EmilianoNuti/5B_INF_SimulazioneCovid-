@@ -1,3 +1,19 @@
+ /* stile per i grafici */
+
+.chart-div
+{
+    margin-right: 5%;
+    margin-bottom: 40%;
+}
+
+.title h1
+{
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Anton', sans-serif;
+}
+
+/*  css della simulazione */
 #finestraGioco
 {
     width: 600px;

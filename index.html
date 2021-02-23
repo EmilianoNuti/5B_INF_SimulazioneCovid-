@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <script src="./js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> <!--libreria Chartjs per i grafici-->
+    <title>Document</title>
+    <script src="./js/grafico.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script> <!--Script da passare-->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,7 +45,20 @@
             </canvas>
         </div>
     </div>
-    <div id="grafico"></div>
+    <div id="grafico">
+        <div class="div-padre">
+            <div class="container">
+              <div class="title">
+                <h1>GRAFICO SIMULAZIONE</h1>
+              </div>
+              <div class="chart-div"> <!--Div dove all'interno c'è il canvas del grafico-->
+                <canvas id="myChart">
+                    <!--GRAFICO-->
+                </canvas>
+              </div>
+            </div>
+          </div>
+    </div>
     <script src="./js/simulazione.js"></script>
 </body>
 </html>
